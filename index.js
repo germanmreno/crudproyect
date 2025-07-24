@@ -58,7 +58,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 // Manejar la ruta de React, devolver todas las peticiones a la aplicación React
 app.all('/{*any}', (req, res, next) => {
-  res.sendFile(path.join(__dirname, 'dist'));
+  res.sendFile(path.join(__dirname, 'dist')); 
 });
 // Define el puerto en el que se ejecutará el servidor.
 const PORT = process.env.PORT || 5000;
